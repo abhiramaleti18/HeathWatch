@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Report - HealthWatch</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">HealthWatch</div>
+        <div class="nav-links">
+            <span id="userName"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <a href="volunteer-dashboard.html">Dashboard</a>
+            <a href="submit-report.html" class="active">Submit Report</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+        </aside>
+
+        <main class="main-content">
+            <h1>Submit Health Report</h1>
+
+            <div class="form-container">
+                <form id="reportForm" class="report-form">
+                    <div id="successMessage" class="success-message"></div>
+                    <div id="errorMessage" class="error-message"></div>
+
+                    <label for="villageId">Village</label>
+                    <select id="villageId" required>
+                        <option value="">Loading villages...</option>
+                    </select>
+
+                    <label for="reportType">Disease Category</label>
+                    <select id="reportType" required>
+                        <option value="water-borne">Water-borne</option>
+                        <option value="vector-borne">Vector-borne</option>
+                        <option value="respiratory">Respiratory</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="affectedCount">Number of Affected Persons</label>
+                    <input type="number" id="affectedCount" min="1" required>
+
+                    <label for="ageGroup">Primary Age Group</label>
+                    <select id="ageGroup" required>
+                        <option value="children">Children (0-14)</option>
+                        <option value="adults">Adults (15-60)</option>
+                        <option value="elderly">Elderly (60+)</option>
+                    </select>
+
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="symptoms" value="fever"> Fever</label>
+                        <label><input type="checkbox" name="symptoms" value="diarrhea"> Diarrhea</label>
+                        <label><input type="checkbox" name="symptoms" value="vomiting"> Vomiting</label>
+                        <label><input type="checkbox" name="symptoms" value="cough"> Cough</label>
+                        <label><input type="checkbox" name="symptoms" value="rash"> Rash</label>
+                    </div>
+
+                    <label for="suspectedDisease">Suspected Disease</label>
+                    <input type="text" id="suspectedDisease">
+
+                    <label for="waterSource">Main Water Source</label>
+                    <select id="waterSource">
+                        <option value="well">Open Well</option>
+                        <option value="borewell">Hand Pump / Borewell</option>
+                        <option value="river">River / Pond</option>
+                        <option value="piped">Piped Supply</option>
+                    </select>
+
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" rows="4"></textarea>
+
+                    <button type="submit" class="btn-primary">Submit Report</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/submit-report.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts - Health Surveillance System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">HealthWatch</div>
+        <div class="nav-links">
+            <span id="userName"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebarNav"></aside>
+
+        <main class="main-content">
+            <h1>Alerts</h1>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="resolved">Resolved</button>
+            </div>
+
+            <div id="alertsContainer">
+                <p>Loading alerts...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/alerts.js"></script>
+</body>
+</html>

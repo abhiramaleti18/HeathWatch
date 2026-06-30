@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard - Health Surveillance System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">HealthWatch</div>
+        <div class="nav-links">
+            <span id="userName"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <a href="volunteer-dashboard.html" class="active">Dashboard</a>
+            <a href="submit-report.html">Submit Report</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+        </aside>
+
+        <main class="main-content">
+            <h1>Welcome, <span id="volunteerName"></span></h1>
+
+            <div class="dashboard-panel">
+                <h3>My Recent Reports</h3>
+                <table id="myReportsTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Village</th>
+                            <th>Suspected Disease</th>
+                            <th>Affected</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/volunteer-dashboard.js"></script>
+</body>
+</html>

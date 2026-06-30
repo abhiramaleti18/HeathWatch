@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - HealthWatch</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">HealthWatch</div>
+        <div class="nav-links">
+            <span id="userName"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebarNav"></aside>
+
+        <main class="main-content">
+            <h1>AI Assistant</h1>
+
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-message chat-ai">Hello! I am your AI Health Assistant. How can I help you today?</div>
+                </div>
+
+                <form id="chatForm" class="chat-input-form">
+                    <input type="text" id="chatInput" placeholder="Type your message..." required>
+                    <button type="submit" class="btn-primary">Send</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/ai-assistant.js"></script>
+</body>
+</html>

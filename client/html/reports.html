@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Health Surveillance System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">HealthWatch</div>
+        <div class="nav-links">
+            <span id="userName"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebarNav"></aside>
+
+        <main class="main-content">
+            <h1>All Reports</h1>
+
+            <div class="dashboard-panel">
+                <table id="reportsTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Village</th>
+                            <th>Reported By</th>
+                            <th>Disease</th>
+                            <th>Affected</th>
+                            <th>Symptoms</th>
+                            <th>Water Source</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/reports.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awareness - Health Surveillance System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">HealthWatch</div>
+        <div class="nav-links">
+            <span id="userName"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebarNav"></aside>
+
+        <main class="main-content">
+            <h1>Health Awareness</h1>
+
+            <div id="generateSection" style="display: none; margin-bottom: 2rem;">
+                <button id="generateBtn" class="btn-primary">+ Generate AI Content</button>
+
+                <div id="generateFormContainer" class="form-container" style="display: none;">
+                    <form id="generateForm" class="report-form">
+                        <div id="errorMessage" class="error-message"></div>
+                        <label for="disease">Disease / Topic</label>
+                        <input type="text" id="disease" placeholder="e.g. Cholera prevention" required>
+
+                        <label for="language">Language</label>
+                        <select id="language">
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Telugu">Telugu</option>
+                        </select>
+
+                        <button type="submit" class="btn-primary">Generate & Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="postsContainer" class="posts-grid">
+                <p>Loading awareness content...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/awareness.js"></script>
+</body>
+</html>

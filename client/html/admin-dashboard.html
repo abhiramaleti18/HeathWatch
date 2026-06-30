@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Health Surveillance System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">HealthWatch</div>
+        <div class="nav-links">
+            <span id="userName"></span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <a href="admin-dashboard.html" class="active">Dashboard</a>
+            <a href="villages.html">Villages</a>
+            <a href="alerts.html">Alerts</a>
+            <a href="reports.html">Reports</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+        </aside>
+
+        <main class="main-content">
+            <h1>Admin Dashboard</h1>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalVillages">0</div>
+                    <div class="stat-label">Total Villages</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalReports">0</div>
+                    <div class="stat-label">Total Reports</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="activeAlerts">0</div>
+                    <div class="stat-label">Active Alerts</div>
+                </div>
+            </div>
+
+            <div class="dashboard-panel">
+                <h3>Most Affected Villages</h3>
+                <table id="recentReportsTable">
+                    <thead>
+                        <tr>
+                            <th>Village</th>
+                            <th>District</th>
+                            <th>State</th>
+                            <th>Trend</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>
